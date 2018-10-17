@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <image src="{{ avatar|default('http://avatar.csdn.net/1/D/B/3_hmzkekek41.jpg') }}"></image>
+    <hr>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <a href="#">{{ comment.user }}</a>
+                <p>评论数：{{ comments|length }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

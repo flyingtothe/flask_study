@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {#  静态资源加载方式  #}
+    <link rel="subsection" href="{{ url_for('static', filename='css/index5.css') }}">
+    <script src="{{ url_for("static", filename='js/index5.js') }}"></script>
+</head>
+<body>
+    {#  静态资源加载方式  #}
+    <a href="{{ url_for('login1') }}">登陆</a>
+    <img src="{{ url_for('static', filename='images/3356f1cab7384c301190a3a517c0bb3f_t01acf93be5d101b883.jpg') }}">
+</body>
+</html>
