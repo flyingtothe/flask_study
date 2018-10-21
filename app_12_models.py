@@ -1,7 +1,7 @@
-from sqlalchemy import Column, Integer, String
-from exts import db
+# 管理模型
+from app_12_exts import db
 
-class Article(db):
+class Article(db.Model):
     __tablename__ = 'article'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    title = Column(String(100), nullable=False)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(100), nullable=False)

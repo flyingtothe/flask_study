@@ -1,9 +1,8 @@
-# 使用 flask—script，需要使用 manage.py 文件
-
 from flask_script import Manager
 from app_11 import app
 from app_11_db import DBmanager
 
+# 使用 flask—script，需要使用 manage.py 文件
 manager = Manager(app)
 
 @manager.command

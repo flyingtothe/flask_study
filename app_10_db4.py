@@ -42,7 +42,7 @@ def index():
     # tag1 = Tag(name='111')
     # tag2 = Tag(name='222')
 
-    # # 多对多关系建立
+    # 多对多关系建立
     # article1.tags.append(tag1)
     # article1.tags.append(tag2)
     # article2.tags.append(tag1)

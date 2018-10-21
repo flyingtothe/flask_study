@@ -1,12 +1,10 @@
 from flask import Flask
-from sqlalchemy import create_engine, Column, Integer, String, Table, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship, backref
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
 app.config.from_object('config')
-engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'], max_overflow=5)
-Base = declarative_base()
+db = SQLAlchemy(app)
 
 
 @app.route('/')
