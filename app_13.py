@@ -7,9 +7,12 @@ app = Flask(__name__)
 app.config.from_object('config')
 db.init_app(app)
 
-# 访问服务器中的 app 需先将 app 插入栈中
-with app.app_context():
-    db.create_all()
+# 使用上下文将 app 加载至栈中
+# with app.app_context():
+#     db.create_all()
+
+# flask-migrate 需要与 flask-script 配合使用
+
 
 @app.route('/')
 def index():
