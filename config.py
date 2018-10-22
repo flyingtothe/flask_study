@@ -20,7 +20,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
  'TESTING':                              False,                          是否开启测试模式
  'PROPAGATE_EXCEPTIONS':                 None,                          
  'PRESERVE_CONTEXT_ON_EXCEPTION':        None,
- 'SECRET_KEY':                           None,
+ 'SECRET_KEY':                           None,                           24个字符的字符串
  'PERMANENT_SESSION_LIFETIME':           timedelta(days=31),
  'USE_X_SENDFILE':                       False,
  'LOGGER_NAME':                          None,
