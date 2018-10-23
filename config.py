@@ -1,6 +1,9 @@
 # coding=utf-8
 
-DEBUG = True,
+import os
+
+DEBUG = True
+SECRET_KEY = os.urandom(24)
 
 # 连接数据库配置
 # dialect + driver://username:password@host:port/database

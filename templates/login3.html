@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{{ url_for('login3') }}" method="post">
+        <tbody>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" placeholder="输入" name="username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" placeholder="输入" name="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="登陆"></td>
+            </tr>
+        </tbody>
+    </form>
+</body>
+</html>

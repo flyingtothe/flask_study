@@ -1,10 +1,15 @@
 from flask_script import Manager
+from flask_migrate import Migrate, MigrateCommand
+
 # from app_11 import app
 # from app_11_db import DBmanager
-from app_13 import app
-from flask_migrate import Migrate, MigrateCommand
-from app_13_exts import db
-from app_13_models import Article
+
+# from app_13 import app
+# from app_13_exts import db
+# from app_13_models import Article
+
+from app_object import app
+from app_object_exts import db
 
 manager = Manager(app)
 
