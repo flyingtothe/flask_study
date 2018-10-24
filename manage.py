@@ -10,6 +10,7 @@ from flask_migrate import Migrate, MigrateCommand
 
 from app_object import app
 from app_object_exts import db
+from app_object_models import User, Question
 
 manager = Manager(app)
 

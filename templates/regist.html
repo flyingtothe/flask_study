@@ -1,7 +1,30 @@
 {% extends 'base2.html' %}
 
-{% block title %}首页{% endblock %}
+{% block title %}注册{% endblock %}
 
-{% block title %}首页{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login5_regist.css')}}">
+{% endblock %}
 
-{% block body %}这是首页{% endblock %}
+{% block body %}
+    <h3 class="page-title">注册</h3>
+    <form action="" method="post">
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="telephone" name="telephone">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="username" name="username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" name="password">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" name="confirmpassword">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block">注册</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
