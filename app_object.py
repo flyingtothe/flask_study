@@ -70,9 +70,9 @@ def question():
     else:
         title = request.form.get('title')
         content = request.form.get('content')
-        Question(title=title, content=content)
+        question = Question(title=title, content=content)
         user_id = session.get('user_id')
-        user = User.query.filter(User.id==user_id).first()
+        user = User.query.filter(User.id == user_id).first()
         question.author = user
         db.session.add(question)
         db.session.commit()

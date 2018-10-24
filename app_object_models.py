@@ -14,6 +14,6 @@ class Question(db.Model):
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     create_time = db.Column(db.DateTime, default=datetime.now())
-    auther_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-    auther = db.relationship('User', backref=db.backref('question'))
+    author = db.relationship('User', backref=db.backref('question'))
