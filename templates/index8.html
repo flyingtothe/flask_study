@@ -3,15 +3,25 @@
 {% block title %}首页{% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login5_regist.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index8.css')}}">
 {% endblock %}
 
 {% block body %}
     <ul>
-        <li>
-            <div class="avater-group">
-                <img src="{{ url_for('static', filename='images/ebd9d630acb077463c7f42a7c946fd5c_t014ff9475356eebc3a.jpg')}}" alt=""  class="avatar">
-            </div>
-        </li>
+        {% for question in questions %}
+            <li>
+                <div class="avatar-group">
+                    <img src="{{ url_for('static', filename='images/ebd9d630acb077463c7f42a7c946fd5c_t014ff9475356eebc3a.jpg')}}" alt=""  class="avatar">
+                </div>
+                <div class="question-group">
+                    <p class="question-title"><a href="{{ url_for('detail', question_id=question.id) }}">{{ question.title }}</a></p>
+                    <p class="question-content">{{ question.content }}</p>
+                    <div class="question-info">
+                        <span class="question-author">{{ question.author.username }}</span>
+                        <span class="question-time">{{ question.create_time }}</span>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock %}

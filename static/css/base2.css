@@ -17,3 +17,7 @@ body{
 .page-title{
     text-align: center;
 }
+
+.navbar-header .navbar-brand .active{
+    padding: 0;
+}

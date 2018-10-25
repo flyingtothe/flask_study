@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+
+{% block title %}详情{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail.css')}}">
+{% endblock %}
+
+{% block body %}
+    <h3 class="page-title">{{ question.title }}</h3>
+    <p class="question-info">
+        <span>作者:{{ question.author.username }}</span>
+        <span>时间:{{ question.create_time }}</span>
+    </p>
+    <hr>
+    <p class="question-content">
+        {{ question.content }}
+    </p>
+    <hr>
+    <h4>评论：(0)</h4>
+    <from action="#" method="post">
+        <div class="from-group">
+            <input type="text" class="form-control" placeholder="填写">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">发表</button>
+        </div>
+    </from>
+{% endblock %}
