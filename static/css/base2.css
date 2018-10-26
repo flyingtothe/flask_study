@@ -1,6 +1,11 @@
 .logo{
-    width: 100px;
-    height: 35px;
+    width: 80px;
+    height: 20px;
+}
+
+ul li{
+    border-bottom:  #eee;
+    overflow: hidden;
 }
 
 body{
@@ -18,6 +23,6 @@ body{
     text-align: center;
 }
 
-.navbar-header .navbar-brand .active{
-    padding: 0;
+.navbar-form .btn{
+    margin: 0;
 }

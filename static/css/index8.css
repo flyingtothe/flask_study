@@ -3,12 +3,6 @@ ul{
     padding-left: 0;
 }
 
-ul li{
-    border-bottom: 1px solid #eee;
-    overflow: hidden;
-    padding: 10px 0;
-}
-
 .avatar-group{
     width: 38px;
     height: 100%;

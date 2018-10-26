@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from app_object_models import User, Question
+from app_object_models import User, Question, Answer
 from app_object_exts import db
 from decorators import login_required
 
@@ -87,6 +87,24 @@ def question():
 def detail(question_id):
     question_model = Question.query.filter(Question.id == question_id).first()
     return render_template('detail.html', question=question_model)
+
+# 发布评论
+@app.route('/add_answer/', methods=['POST'])
+@login_required
+def add_answer():
+    content = request.form.get('answer_content')
+    question_id = request.form.get('question_id')
+
+    answer = Answer(content=content)
+    user_id = session['user_id']
+    user = User.query.filter(User.id == user_id).first()
+    answer.author = user
+    question = Question.query.filter(Question.id == question_id).first()
+    answer.question = question
+    db.session.add(answer)
+    db.session.commit()
+    return redirect(url_for('detail', question_id=question_id))
+
 
 # 利用钩子函数判断登陆状态
 @app.context_processor
